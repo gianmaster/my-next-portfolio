@@ -3,10 +3,13 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "sanity:start": "cd sanity-my-portfolio && yarn start",
+    "sanity:build": "cd sanity-my-portfolio && yarn build"
   },
   "dependencies": {
     "next": "latest",
+    "next-sanity": "^1.0.0",
     "react": "18.1.0",
     "react-dom": "18.1.0"
   },
