@@ -8,8 +8,10 @@
     "sanity:build": "cd sanity-my-portfolio && yarn build"
   },
   "dependencies": {
+    "@playwright/test": "^1.27.1",
     "next": "latest",
     "next-sanity": "^1.0.0",
+    "playwright": "^1.27.1",
     "react": "18.1.0",
     "react-dom": "18.1.0"
   },
