@@ -6,21 +6,34 @@ interface IDefaultSanityProps {
   _rev: string;
 }
 
+type Slug = {
+  _type: 'slug';
+  current: string;
+};
+
+type Image = {
+  _type: 'image';
+  asset: {
+    _ref: string;
+    _type: 'reference';
+  };
+};
+
 export type Post = IDefaultSanityProps & {
   title: string;
-  body: string;
-  slug: string;
+  body?: string;
+  slug: production;
   author: Author;
   lang: Language;
-  mainImage: string;
+  mainImage: Image;
   categories: Category[];
-  metaDescription: string;
+  metaDescription?: string;
 };
 
 export type Author = IDefaultSanityProps & {
   name: string;
-  slug: string;
-  image: string;
+  slug: production;
+  image: Image;
   bio: string[];
 };
 
@@ -62,7 +75,7 @@ export type Project = IDefaultSanityProps & {
   link: string;
   repo: string;
   lang: Language;
-  image: string;
+  image: Image;
 };
 
 export type SanityResponse<T> = {
